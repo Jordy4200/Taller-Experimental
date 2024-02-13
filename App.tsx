@@ -1,18 +1,15 @@
-import React from 'react';
-import { TerceraScreen } from './Screens/TerceraScreen';
-//import { PrimeraScreen } from './Screens/PrimeraScreen';
-//import { SegundaScreen } from './Screens/SegundaScreen';
+import 'react-native-gesture-handler';
+import React from 'react'
+import { NavigationContainer } from '@react-navigation/native';
+import { StackNavigator } from './Screens/navegacion/StackNavigator';
 
 
-export const App = () => {
+const App = () => {
   return (
-//<<PrimeraScreen/>
-//<SegundaScreen/>
-<TerceraScreen/>
+    <NavigationContainer>
+      <StackNavigator/>
+    </NavigationContainer>
   )
 }
-
-
-
 
 export default App;

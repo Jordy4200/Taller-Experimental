@@ -24,7 +24,7 @@ export const SegundaScreen = () => {
       );
     };
     
-    const Navbar = () => {
+    export const Navbar = () => {
         return (
           <View style={styles.navbar}>
             <TouchableOpacity onPress={() => console.log('Home pressed')}>
