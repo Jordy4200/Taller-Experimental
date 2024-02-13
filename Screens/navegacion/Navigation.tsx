@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { TerceraScreen } from "../TerceraScreen";
 import { SegundaScreen } from "../SegundaScreen";
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+
 
 const Tab = createBottomTabNavigator();
 
@@ -14,7 +14,8 @@ function MyTabs(){
     <Tab.Navigator
     initialRouteName="Shop"
     screenOptions={{
-        tabBarActiveTintColor:'red'
+        tabBarActiveTintColor:'red',
+    
     } }
     
     >
@@ -23,7 +24,7 @@ function MyTabs(){
       component={PrimeraScreen}
         options={{
        headerShown:false,
-   
+      
     }}
 
       />
