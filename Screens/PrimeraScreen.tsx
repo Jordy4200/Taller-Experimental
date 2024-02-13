@@ -4,7 +4,6 @@ import { View, Text, TouchableOpacity, Image,StyleSheet } from 'react-native';
 export const PrimeraScreen = ({ navigation }: any) => {
   return (
     <View style={styles.ContenedorPadre}>
-       <Navbar navigation={navigation} />
       <View style={styles.Container}>
         <Text style={{ fontSize: 20, fontWeight: 'bold' ,textAlign: 'center'}}>Tienda de productos</Text>
         <Text style={{ fontSize: 20, fontWeight: 'bold',textAlign: 'center'}}>Toys & Legos</Text>
@@ -51,24 +50,6 @@ export const PrimeraScreen = ({ navigation }: any) => {
   );
 };
 
-export  const Navbar = ({ navigation }: any) => {
-    return (
-<View style={styles.navbar}>
-    <TouchableOpacity onPress={() => console.log('Home pressed')}>
-      <Text style={styles.TextoNarvar}>Home</Text>
-    </TouchableOpacity>
-    <TouchableOpacity onPress={() => navigation.navigate('PrimeraScreen')}>
-      <Text style={styles.TextoNarvar}>Tienda</Text>
-    </TouchableOpacity>
-    <TouchableOpacity onPress={() => navigation.navigate('SegundaScreen')}>
-      <Text style={styles.TextoNarvar}>Nosotros</Text>
-    </TouchableOpacity>
-    <TouchableOpacity onPress={() => navigation.navigate('TerceraScreen')}>
-      <Text style={styles.TextoNarvar}>Contacto</Text>
-    </TouchableOpacity>
-  </View>
-    );
-  };
   
   const Footer = () => {
     return (
