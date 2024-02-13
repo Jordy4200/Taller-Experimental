@@ -53,7 +53,7 @@ export const PrimeraScreen = ({ navigation }: any) => {
 
 export  const Navbar = ({ navigation }: any) => {
     return (
-  <View style={styles.navbar}>
+<View style={styles.navbar}>
     <TouchableOpacity onPress={() => console.log('Home pressed')}>
       <Text style={styles.TextoNarvar}>Home</Text>
     </TouchableOpacity>
@@ -66,7 +66,7 @@ export  const Navbar = ({ navigation }: any) => {
     <TouchableOpacity onPress={() => navigation.navigate('TerceraScreen')}>
       <Text style={styles.TextoNarvar}>Contacto</Text>
     </TouchableOpacity>
-    </View>
+  </View>
     );
   };
   

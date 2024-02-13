@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-export const TerceraScreen = () => {
+export const TerceraScreen = ({ navigation }: any) => {
     return (
         <View style={styles.ContenedorPadre}>
-          <Navbar />
+          <Navbar navigation={navigation} />
           <View style={styles.Container}>
             <Text style={styles.Titulo}>Contacto</Text>
             <Text style={styles.Cuerpo}>¡MUCHAS GRACIAS POR SU INTERÉS EN MAZIPLY TOYS! ¡NUESTRO OBJETIVO ES AYUDARTE DE LA MANERA QUE MEJOR TE FUNCIONE PARA QUE PUEDAS VOLVER A TENER UN DÍA INCREÍBLE!</Text>
@@ -25,22 +25,22 @@ export const TerceraScreen = () => {
       );
     };
     
-    const Navbar = () => {
+    const Navbar = ({ navigation }: any) => {
         return (
-          <View style={styles.navbar}>
-            <TouchableOpacity onPress={() => console.log('Home pressed')}>
-              <Text style={styles.TextoNavbar}>Home</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => console.log('Tienda pressed')}>
-              <Text style={styles.TextoNavbar}>Tienda</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => console.log('Nosotros pressed')}>
-              <Text style={styles.TextoNavbar}>Nosotros</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => console.log('Contacto pressed')}>
-              <Text style={styles.TextoNavbar}>Contacto</Text>
-            </TouchableOpacity>
-          </View>
+    <View style={styles.navbar}>
+    <TouchableOpacity onPress={() => console.log('Home pressed')}>
+      <Text style={styles.TextoNavbar}>Home</Text>
+    </TouchableOpacity>
+    <TouchableOpacity onPress={() => navigation.navigate('PrimeraScreen')}>
+      <Text style={styles.TextoNavbar}>Tienda</Text>
+    </TouchableOpacity>
+    <TouchableOpacity onPress={() => navigation.navigate('SegundaScreen')}>
+      <Text style={styles.TextoNavbar}>Nosotros</Text>
+    </TouchableOpacity>
+    <TouchableOpacity onPress={() => navigation.navigate('TerceraScreen')}>
+      <Text style={styles.TextoNavbar}>Contacto</Text>
+    </TouchableOpacity>
+    </View>
         );
       };
       
