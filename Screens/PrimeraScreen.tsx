@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Image,StyleSheet } from 'react-native';
 
-export const PrimeraScreen = ({ navigation }: any) => {
+export const PrimeraScreen = () => {
   return (
     <View style={styles.ContenedorPadre}>
       <View style={styles.Container}>

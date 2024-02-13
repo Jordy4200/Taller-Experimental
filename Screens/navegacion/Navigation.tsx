@@ -3,11 +3,12 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { TerceraScreen } from "../TerceraScreen";
 import { SegundaScreen } from "../SegundaScreen";
-import { Entypo } from '@expo/vector-icons'; 
-import { Feather } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
 
+
+//Ingeniera no me deja poner iconos no tengo idea de porque :'
 function MyTabs(){
   return (
     <Tab.Navigator
@@ -22,6 +23,7 @@ function MyTabs(){
       component={PrimeraScreen}
         options={{
        headerShown:false,
+   
     }}
 
       />
