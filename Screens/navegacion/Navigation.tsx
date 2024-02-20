@@ -3,6 +3,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { TerceraScreen } from "../TerceraScreen";
 import { SegundaScreen } from "../SegundaScreen";
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 
 const Tab = createBottomTabNavigator();
@@ -12,7 +14,7 @@ const Tab = createBottomTabNavigator();
 function MyTabs(){
   return (
     <Tab.Navigator
-    initialRouteName="Shop"
+    initialRouteName="HomePage"
     screenOptions={{
         tabBarActiveTintColor:'red',
     
@@ -20,24 +22,36 @@ function MyTabs(){
     
     >
         
-      <Tab.Screen name='Shop' 
+      <Tab.Screen 
+      name='Home' 
       component={PrimeraScreen}
         options={{
        headerShown:false,
+       tabBarIcon: ({ color, size }) => (
+        <MaterialCommunityIcons name="home" color={color} size={size} />
+      ),
       
     }}
 
+
+
       />
-      <Tab.Screen name='Nosotros' 
+      <Tab.Screen name='Shop' 
       component={SegundaScreen}
       options={{
         headerShown:false,
+        tabBarIcon: ({ color, size }) => (
+          <MaterialCommunityIcons name="shopping" color={color} size={size} />
+        ),
      }}
       />
-      <Tab.Screen name='Contacto' 
+      <Tab.Screen name='My Account' 
       component={TerceraScreen}
       options={{
         headerShown:false,
+        tabBarIcon: ({ color, size }) => (
+          <MaterialCommunityIcons name="account" color={color} size={size} />
+        ),
      }}
       />
     </Tab.Navigator>
